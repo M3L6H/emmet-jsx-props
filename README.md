@@ -1,18 +1,7 @@
 # emmet-jsx-props package
 
-Atom package to extend Emmet's JSX expansions to convert string attributes to js props. Now with the ability to toggle conversion of user-entered string props. Forked from [iJigg's package](https://github.com/iJigg/emmet-jsx-props)
+Atom package to extend Emmet's JSX expansions to convert string attributes to js props. Forked from [iJigg's package](https://github.com/iJigg/emmet-jsx-props). Behavior is slightly altered.
 
-## Demo
-![alt tag](https://github.com/iJigg/emmet-jsx-props/raw/master/demo.gif)
-
-## Enable tab completion for JSX with Emmet in Atom
-This guide assumes you have the emmet and language-babel packages already installed in Atom
-
-1. Open the keymap.cson file by clicking on Atom -> Keymap… in the menu bar
-2. Add these lines of code to your keymap:
-```
-'atom-text-editor[data-grammar~="jsx"]:not([mini])':
-  'tab': 'emmet:expand-abbreviation-with-tab'
-```
-
-Now open a file with JSX code, type div[prop=myProp], press tab and it should autocomplete to `<div prop={myProp}></div>`! (if it's not properly syntax highlighted, select Babel ES6 JavaScript or JSX as the syntax, this won't work otherwise)
+- `Button[prop=myProp]`, `Button[prop="myProp"]`, and `Button[prop='myProp']` expand into `<Button prop="myProp"></Button>` which is default Emmet behavior
+- `Button[prop={myJSXProp}]` expands into `<Button prop={myJSXProp}></Button>`
+- If enabled, `Button[prop=(() => {})]` expands into `<Button prop={() => {}}></Button>`
