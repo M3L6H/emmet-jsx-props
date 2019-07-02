@@ -1,4 +1,4 @@
-## 1.5.0 - Updated functionality
+## 2.0.0 - Updated functionality
 - Changed the functionality of the package
 - Added support for arrow function expansion
 
