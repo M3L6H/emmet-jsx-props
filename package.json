@@ -1,7 +1,7 @@
 {
   "name": "emmet-jsx-props-2",
   "main": "./lib/emmet-jsx-props",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Atom package to extend Emmet's JSX expansions to convert string props to js props. Now with the ability to keep default Emmet functionality and arrow function support. Forked from https://github.com/iJigg/emmet-jsx-props",
   "keywords": [
     "emmet",
